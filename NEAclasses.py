@@ -13,3 +13,6 @@ class scale:
         chord.append(self.third)
         chord.append(self.fith)
         return chord
+
+#*args and **qargs - can be used for something like to create optional arguments for classes and functions?
+#use to add the 7th to dominant chord object but not to any other scale degree?

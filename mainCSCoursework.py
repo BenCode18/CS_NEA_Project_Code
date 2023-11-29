@@ -1,43 +1,6 @@
 import time
 from NEAclasses import scale
 
-# class scale:
-
-    # def __init__(self, root, third, fith, chordRN, chordName): #chordRN = chordRomanNumeral
-    #     self.root = root
-    #     self.third = third
-    #     self.fith = fith
-    #     self.chordRN = chordRN
-    #     self.chordName = chordName
-
-    # def chordNotes(self):
-    #     chord = []
-    #     chord.append(self.root)
-    #     chord.append(self.third)
-    #     chord.append(self.fith)
-    #     return chord
-
-#this is the class "scale" I imported from my classes file called "NEAclasses"
-
-
-
-
-#*args and **qargs - can be used for something like to create optional arguments for classes and functions?
-#use to add the 7th to dominant chord object but not to any other scale degree?
-
-# def funcDiatonicCheck(melody, scaleList):
-#       i = 0
-#       diatonic = True
-#       failMessage = ""
-#       while i < len(melody) and diatonic == True:
-#         if melody[i] in scaleList:
-#             diatonic = True
-#             i += 1
-#         else:
-#             diatonic = False
-#             failMessage = ("The note:", melody[i], "is not in the key C Major")
-#       return diatonic, failMessage
-
 def funcDiatonicCheck(melodyNote, scaleList):
     if melodyNote in scaleList:
         diatonic = True
@@ -82,42 +45,6 @@ def funcBasicChordChoice(melody):
                 choice.append("subdominant")
     return choice        
 
-
-
-
-# def funcChordChoice(melody):
-#     for note in melody:
-#         choice = ""
-#         if melody[note] == tonic.root:
-#             choice = "tonic"
-#             break
-#         elif melody[note] == dominant.root:
-#             choice = "dominant"
-#             break
-#         elif melody[note] == tonic.fith:
-#             choice = "tonic"
-#             break
-#         elif melody[note] == dominant.fith:
-#             choice = "dominant"
-#             break
-#         elif melody[note] == tonic.third:
-#             choice = "tonic"
-#             break
-#         elif melody[note] == dominant.third:
-#             choice = "dominant"
-#             break
-#         elif melody[note] == subdominant.root:
-#             choice = subdominant
-#             break
-        
-        # if root of tonic chord
-
-
-
-
-# root of tonic, root of dominant
-# chordCheckOrder = [""]
-
 tonic = scale("C", "E", "G", "I", "C Maj")
 supertonic = scale("D", "F", "A", "ii", "D Min")
 mediant = scale("E", "G", "B", "iii", "E Min")
@@ -126,16 +53,10 @@ dominant = scale("G", "B", "D", "V", "G Maj")
 submediant = scale("A", "C", "E", "vi", "A Min")
 leadingNote = scale("B", "D", "F", "vii", "B Dim")
 
-
 def main():
     scaleList = funcScaleList(scale)
     print(scaleList)
-    # diatonic = False
-    # while diatonic == False:
     melody = funcInputMelody(scaleList)
-        # diatonic, failMessage = funcDiatonicCheck(melody, scaleList)
-        # if diatonic == False:
-            # print(diatonic, failMessage)
     print(melody)
     choice = funcBasicChordChoice(melody)
     print(choice)
@@ -143,13 +64,9 @@ def main():
 main()
 
 
-
-# make it so that as soon as you input an invalid note into your melody, it stops you and makes you restart the process of 
-# entering a melody rather than wating until you have entered all the melody notes before checking
-
-
 # To Do:
     # Try to introduce a cadence point at the end, try to make it do dominant -> tonic for a perfect cadence.
+    # create a better GUI
 
 # Done:
     # Make it so that the function to check if diatonic works per single melody note, then call the function
