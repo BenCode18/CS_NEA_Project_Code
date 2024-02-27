@@ -1,2 +1,28 @@
 {% extends "base.html" %}
+
 {% block title %}Melody Builder Homepage{% endblock %}
+
+{% block navbarLogo %}
+<a class="navbar-brand">
+<!-- I have removed the " href="" " from this anchor tag as I do not wish for clicking the button to take the user to a different webpage-->
+{% endblock %}
+
+{% block pageName %}
+Melody Builder
+{% endblock %}
+
+{% block pieceNameForm %}
+<form class="d-flex" role="search" id="searchForm">
+    <input class="form-control me-2" type="text" placeholder="Name of piece:" aria-label="Name" form="searchForm">
+    <button id="searchSubmit" style="display: none;" type="submit" form="searchForm"></button>
+    <!-- Hidden submit button (because of the "style="display: none;"") -->
+</form>
+{% endblock %}
+
+{% block navButtons %}
+<li class="nav-item me-auto">
+    <a class="btn btn-primary me-2" href="/user_homepage" role="button">Save for later</a>
+<!-- This button will be more complex to code as it must trigger the process of saving the work-->
+</li>
+{% endblock %}
+

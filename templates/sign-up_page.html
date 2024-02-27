@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Sign-up page{% endblock %}
+
+{% block navbarLogo %}
+<a class="navbar-brand" href="/">
+<!-- Clicking the logo will take the user back to initial_homepage.html -->
+{% endblock %}
+
+{% block pageName %}
+Sign-up Page
+{% endblock %}
+
+{% block navButtons %}
+<li class="nav-item me-auto">
+    <a class="btn btn-primary me-2" href="/melody_builder" role="button">Continue as guest</a>
+</li>
+<li class="nav-item me-auto">
+    <a class="btn btn-primary me-2" href="/log-in" role="button">Log-in</a>
+</li>
+{% endblock %}

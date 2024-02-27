@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Website Home Page{% endblock %}
+
+{% block navbarLogo %}
+<a class="navbar-brand">
+<!-- I have used inheritence for this anchor element as the href will be different depending on the page -->
+<!-- I have removed the " href="" " from this anchor tag as I do not wish for clicking the button to take the user to a different webpage-->
+{% endblock %}
+
+{% block pageName %}
+Welcome to (brand name)
+{% endblock %}
+
+{% block navButtons %}
+<li class="nav-item me-auto">
+<!-- "me-auto" to space the buttons evenly within the navbar (pushing them to the right) -->
+    <a class="btn btn-primary me-2" href="/melody_builder" role="button">Continue as guest</a>
+<!-- "me-2" adds a margin of 8 pixels to the right side of the button -->
+</li>
+<li class="nav-item me-auto">
+    <a class="btn btn-primary me-2" href="/sign-up" role="button">Sign-up</a>
+</li>
+<li class="nav-item me-auto">
+    <a class="btn btn-primary me-2" href="/log-in" role="button">Log-in</a>
+</li>
+{% endblock %}
+
+
+
+
+
+
+

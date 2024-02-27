@@ -1,11 +1,8 @@
 import time, NEAclasses
 from flask import Flask, render_template
 
-<<<<<<< HEAD
 app = Flask(__name__)
 
-=======
->>>>>>> a6c23a27bb2e1321da76675438688dcee73daaa0
 def funcDiatonicCheck(melodyNote, scaleList):
     if melodyNote in scaleList:
         diatonic = True
@@ -50,7 +47,7 @@ def funcBasicChordChoice(melody):
                 choice.append("subdominant")
     return choice        
 
-<<<<<<< HEAD
+
 tonic = NEAclasses.scale("C", "E", "G", "I", "C Maj")
 supertonic = NEAclasses.scale("D", "F", "A", "ii", "D Min")
 mediant = NEAclasses.scale("E", "G", "B", "iii", "E Min")
@@ -61,16 +58,7 @@ leadingNote = NEAclasses.scale("B", "D", "F", "vii", "B Dim")
 
 @app.route("/")
 def homePage():
-   return render_template("Home_Page")
-=======
-tonic = scale("C", "E", "G", "I", "C Maj")
-supertonic = scale("D", "F", "A", "ii", "D Min")
-mediant = scale("E", "G", "B", "iii", "E Min")
-subdominant = scale("F", "A", "C", "IV", "F Maj")
-dominant = scale("G", "B", "D", "V", "G Maj")
-submediant = scale("A", "C", "E", "vi", "A Min")
-leadingNote = scale("B", "D", "F", "vii", "B Dim")
->>>>>>> a6c23a27bb2e1321da76675438688dcee73daaa0
+    return render_template("Home_Page")
 
 def main():
     scaleList = funcScaleList()
