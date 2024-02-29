@@ -26,7 +26,38 @@ Welcome to (brand name)
 </li>
 {% endblock %}
 
-
+{% block bodyContent %}
+<div class="container">
+    <div class="row row-cols-3 g-3 p-4 align-items-center" style="height: 90vh;">
+    <!-- I have adjusted the height value from 100vh to 90vh,
+    this is because at 100vh, the page becomes verticaly heigher than the web browser window,
+    this is because this gives it the value of the entire screen's height,
+    so when the navbar is added onto that height, the screen becomes too vertically tall,
+    and this results in a scroll bar appearing at the right side of the screen. -->
+    <!-- "g-3" adds a gap between each column -->
+    <!-- "align-items-centre" vertically centres the items (the boxes/containers) in each column -->
+        <div class="col" style="height: 80%;">
+            <div class="border bg-light d-flex align-items-center justify-content-center" style="height: 100%;">
+            <!-- d-flex is a Bootstrap utility class to apply the CSS "display: flex;" properties to the element -->
+            <!-- align-items-center vertically centers the flex items (the child elements) of the element  -->
+            <!-- justify-content-center horizontaly centers the flex items (the child elements) of the element -->
+                <img src="#" alt="Melody Builder" width="100%" height="100%">
+                <!-- I will add a screenshot of the melody builder once I have finished its development -->
+            </div>
+        </div>
+        <div class="col" style="height: 80%;">
+            <div class="border bg-light d-flex align-items-center justify-content-center" style="height: 100%;">
+                <img src="#" alt="Logo" width="100%" height="100%">
+                <!-- This image element will be used to display the logo -->
+            </div>
+        </div>
+        <div class="col" style="height: 80%;">
+            <div class="border bg-light d-flex align-items-center justify-content-center text-center" style="height: 100%;">Temp text</div>
+            <!-- text-center centers text, even if it spans multiple lines -->
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 
 
